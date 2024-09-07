@@ -63,10 +63,10 @@ export default function Generator(props) {
             </div>
 
             <Header index={'02'} title={'Lock on Targets'} description={'Select The Muscles Judge For Annihilation'} />
-            <div className='bg-slate-950  border border-solid border-blue-400 rounded-lg flex flex-col'>
-                <button onClick={OptionToggle} className="relative p-3 flex items-center justify-center ">
-                    <p className=' capitalize'>{muscles.length == 0 ? "Select Your Muscle Group" : muscles.join(" ")}</p>
-                    <i className="fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-down"></i>
+            <div className='bg-slate-950  border border-solid border-blue-400 rounded-lg flex flex-col d'>
+                <button onClick={OptionToggle} className="relative p-3 flex items-center justify-center  ">
+                    <p className=' capitalize '>{muscles.length == 0 ? "Select Your Muscle Group" : muscles.join(" ")}</p>
+                    <i className={`fa-solid absolute right-3 top-1/2 -translate-y-1/2 fa-caret-${Showoption ? "down" : "up"}`}></i>
                 </button>
 
                 {Showoption && <div className='flex flex-col capitalize gap-1  '>
